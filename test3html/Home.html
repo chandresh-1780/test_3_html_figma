@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component</title>
+    <link rel="stylesheet" href="/Home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+
+<body>
+    <header class="headerMain">
+        <div class="headerContainer">
+            <div class="logo">
+                <img src="/images/logo.png" alt="Logo" loading="lazy">
+            </div>
+            <div class="header1">
+                <img src="/images/gridMenu.svg" loading="lazy" alt="wibes" style="width:21px" class="menuToggle">
+            </div>
+            <div class="headerSub1">
+                <ul>
+                    <li class="borderRight">Data</li>
+                    <li class="borderRight">Services</li>
+                    <li class="borderRight">Docs</li>
+                    <li class="borderRight">Company</li>
+                    <li class="borderRight">Contact</li>
+                </ul>
+            </div>
+            <div class="loginDiv">
+                <img src="/images/headicon.svg" alt="demo" loading="lazy">
+                Console
+                <img src="/images/errow.svg" alt="demo" loading="lazy">
+            </div>
+        </div>
+    </header>
+
+    <div class="container1" id="mobileMenu">
+        <div class="head1">
+            <div class="logo1">
+                <div class="logosub">
+                    <span class="closeIcon">&times;</span>
+                </div>
+            </div>
+            <ul class="menu">
+                <li>Data</li>
+                <li>Services</li>
+                <li>Docs</li>
+                <li>Company</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="slider">
+            <div class="slide">
+                <div class="subCon">
+                    <p class="containt">Coding is logical, data is empirical.</p>
+                    <h1>
+                        Enjoy coding,<br>
+                        Leave data to <span>algoseek.</span>
+                    </h1>
+                    <p class="lastCon">Financial data, technology and services.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="subCon">
+                    <p class="containt">Trading is exciting, data is grinding.</p>
+                    <h1>
+                        Enjoy trading,<br>
+                        Leave data to <span>algoseek.</span>
+                    </h1>
+                    <p class="lastCon">Financial data, technology and services.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="subCon">
+                    <p class="containt">Math is neat, data is messy.</p>
+                    <h1>
+                        Enjoy math,<br>
+                        Leave data to <span>algoseek.</span>
+                    </h1>
+                    <p class="lastCon">Financial data, technology and services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="imgDiv">
+        <img src="/images/Talk.png" alt="Talk">
+    </div>
+
+    <div class="bgImgDiv">
+        <div class="conDiv">
+            <p class="descriptionMain">
+                Since our inception in 2015, we've been fusing advanced technology
+                and financial data know how to empower our clients worldwide to
+                achieve business success.
+            </p>
+            <div class="flex">
+                <div class="desDiv">
+                    <p class="suby">Subscribed by</p>
+                    <div class="line"></div>
+                    <h2>
+                        550+
+                    </h2>
+                    <p class="type">INSTITUTIONS</p>
+                </div>
+                <div class="desDiv">
+                    <p class="suby">Including</p>
+                    <div class="line"></div>
+                    <h2>
+                        200+
+                    </h2>
+                    <p class="type">DATASETS</p>
+                </div>
+                <div class="desDiv">
+                    <p class="suby">Data total</p>
+                    <div class="line"></div>
+                    <h2>
+                        3000+
+                    </h2>
+                    <p class="type">TERABYTES</p>
+                </div>
+                <div class="desDiv">
+                    <p class="suby">Total live trading AUM</p>
+                    <div class="line"></div>
+                    <h2>
+                        350+
+                    </h2>
+                    <p class="type">BILLION</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelector('.menuToggle').addEventListener('click', function () {
+            document.getElementById('mobileMenu').style.display = 'block';
+        });
+
+        document.querySelector('.closeIcon').addEventListener('click', function () {
+            document.getElementById('mobileMenu').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
